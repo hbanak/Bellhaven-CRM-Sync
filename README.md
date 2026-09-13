@@ -19,3 +19,6 @@ python main.py
 
 ## Known Limitation: Scheduling
 `.github/workflows/daily.yaml` shows the daily cron schedule this is intended to run on. It is not expected to run successfully as committed as the current script is interactive using `input()` prompts which cannot be answered.
+
+## Known Security Risk: Auth Token
+`main.py` includes a hard coded API token for simplicity. In a production system this would be pulled from an environment variable or secrets manager rather than committed to source control.
